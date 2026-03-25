@@ -4,7 +4,12 @@ import { lancarTransacao, consultarFinanceiro } from '@/lib/tools/financial'
 import { criarTarefa, listarTarefas } from '@/lib/tools/tasks'
 import { criarEvento, listarAgenda } from '@/lib/tools/calendar'
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+// Inicializado dentro de processMessage para evitar erro no build quando a env var não está disponível
+let _client: Anthropic | null = null
+function getClient() {
+  if (!_client) _client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+  return _client
+}
 
 const TOOLS: Anthropic.Tool[] = [
   {
@@ -130,7 +135,7 @@ export async function processMessage({
 
   // Loop de tool use — máximo 5 rodadas para evitar loops infinitos
   for (let round = 0; round < 5; round++) {
-    const response = await client.messages.create({
+    const response = await getClient().messages.create({
       model: 'claude-sonnet-4-5',
       max_tokens: 1024,
       system: getSystemPrompt(),

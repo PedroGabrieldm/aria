@@ -5,9 +5,9 @@ import { createReadStream } from 'fs'
 import { join } from 'path'
 import { tmpdir } from 'os'
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-
 export async function transcribeAudio(audioUrl: string): Promise<string> {
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+
   // Baixa o arquivo de áudio da Evolution API
   const response = await axios.get(audioUrl, { responseType: 'arraybuffer' })
 
