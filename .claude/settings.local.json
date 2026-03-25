@@ -16,7 +16,11 @@
       "Bash(cp \"app/\\(dashboard\\)/layout.tsx\" \"app/dashboard/layout.tsx\")",
       "Bash(cp \"app/\\(dashboard\\)/page.tsx\" \"app/dashboard/page.tsx\")",
       "Bash(cp \"app/\\(dashboard\\)/loading.tsx\" \"app/dashboard/loading.tsx\")",
-      "Bash(cp \"app/\\(dashboard\\)/error.tsx\" \"app/dashboard/error.tsx\")"
+      "Bash(cp \"app/\\(dashboard\\)/error.tsx\" \"app/dashboard/error.tsx\")",
+      "Bash(npx vercel:*)",
+      "Bash(grep -v '^$')",
+      "Bash(while IFS='=' read -r key value)",
+      "Bash(do echo:*)"
     ]
   }
 }
