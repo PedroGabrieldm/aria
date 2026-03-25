@@ -7,7 +7,7 @@ interface CategoryData {
   value: number
 }
 
-const COLORS = ['#6366F1', '#34D399', '#F59E0B', '#F87171', '#60A5FA', '#A78BFA', '#FB923C', '#4ADE80']
+const COLORS = ['#8B5CF6', '#10B981', '#F59E0B', '#F43F5E', '#60A5FA', '#A78BFA', '#FB923C', '#4ADE80']
 
 const fmt = (v: number) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 

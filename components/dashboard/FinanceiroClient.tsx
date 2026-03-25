@@ -85,10 +85,10 @@ export function FinanceiroClient({ initialMonthly, initialCategory }: Props) {
   }
 
   const cards = [
-    { label: 'Receitas', value: fmt(summary.income), color: '#34D399' },
-    { label: 'Despesas', value: fmt(summary.expense), color: '#F87171' },
-    { label: 'Saldo', value: fmt(summary.balance), color: summary.balance >= 0 ? '#34D399' : '#F87171' },
-    { label: 'Economia', value: `${summary.savingsRate}%`, color: '#6366F1' },
+    { label: 'Receitas', value: fmt(summary.income), color: '#10B981' },
+    { label: 'Despesas', value: fmt(summary.expense), color: '#F43F5E' },
+    { label: 'Saldo', value: fmt(summary.balance), color: summary.balance >= 0 ? '#10B981' : '#F43F5E' },
+    { label: 'Economia', value: `${summary.savingsRate}%`, color: '#8B5CF6' },
   ]
 
   return (

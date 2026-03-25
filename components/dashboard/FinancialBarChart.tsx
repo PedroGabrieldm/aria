@@ -58,8 +58,8 @@ export function FinancialBarChart({ data }: { data: MonthData[] }) {
           formatter={(value) => (value === 'income' ? 'Entradas' : 'Saídas')}
           wrapperStyle={{ fontSize: 12, color: 'var(--text-muted)' }}
         />
-        <Bar dataKey="income" fill="#34D399" radius={[4, 4, 0, 0]} maxBarSize={32} />
-        <Bar dataKey="expense" fill="#F87171" radius={[4, 4, 0, 0]} maxBarSize={32} />
+        <Bar dataKey="income" fill="#10B981" radius={[4, 4, 0, 0]} maxBarSize={32} />
+        <Bar dataKey="expense" fill="#F43F5E" radius={[4, 4, 0, 0]} maxBarSize={32} />
       </BarChart>
     </ResponsiveContainer>
   )

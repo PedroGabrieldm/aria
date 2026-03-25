@@ -85,17 +85,6 @@ export function Sidebar({ open, onClose, user }: SidebarProps) {
             onClick={() => handleNav('/dashboard/configuracoes')}
             className={`sidebar-link${isActive('/dashboard/configuracoes') ? ' sidebar-link--active' : ''}`}
           >
-            <Smartphone size={18} />
-            <span>WhatsApp</span>
-            <span className="sidebar-badge">●</span>
-          </Link>
-
-          <Link
-            href="/dashboard/configuracoes"
-            prefetch={true}
-            onClick={() => handleNav('/dashboard/configuracoes')}
-            className={`sidebar-link${isActive('/dashboard/configuracoes') ? ' sidebar-link--active' : ''}`}
-          >
             <Settings size={18} />
             <span>Configurações</span>
           </Link>

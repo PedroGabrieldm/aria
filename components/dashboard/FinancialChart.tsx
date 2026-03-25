@@ -30,12 +30,12 @@ export function FinancialChart({ data }: FinancialChartProps) {
       <AreaChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
         <defs>
           <linearGradient id="gradBalance" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#6366F1" stopOpacity={0.3} />
-            <stop offset="95%" stopColor="#6366F1" stopOpacity={0} />
+            <stop offset="5%" stopColor="#8B5CF6" stopOpacity={0.3} />
+            <stop offset="95%" stopColor="#8B5CF6" stopOpacity={0} />
           </linearGradient>
           <linearGradient id="gradIncome" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#34D399" stopOpacity={0.3} />
-            <stop offset="95%" stopColor="#34D399" stopOpacity={0} />
+            <stop offset="5%" stopColor="#10B981" stopOpacity={0.3} />
+            <stop offset="95%" stopColor="#10B981" stopOpacity={0} />
           </linearGradient>
         </defs>
         <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
@@ -63,8 +63,8 @@ export function FinancialChart({ data }: FinancialChartProps) {
           }}
           cursor={{ stroke: 'var(--border)' }}
         />
-        <Area type="monotone" dataKey="income" stroke="#34D399" strokeWidth={2} fill="url(#gradIncome)" dot={false} />
-        <Area type="monotone" dataKey="balance" stroke="#6366F1" strokeWidth={2} fill="url(#gradBalance)" dot={false} />
+        <Area type="monotone" dataKey="income" stroke="#10B981" strokeWidth={2} fill="url(#gradIncome)" dot={false} />
+        <Area type="monotone" dataKey="balance" stroke="#8B5CF6" strokeWidth={2} fill="url(#gradBalance)" dot={false} />
       </AreaChart>
     </ResponsiveContainer>
   )

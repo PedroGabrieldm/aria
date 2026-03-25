@@ -22,7 +22,7 @@ interface CalendarEvent {
 const WEEKDAYS = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
 
 const EVENT_COLORS = [
-  '#6366F1', '#34D399', '#F59E0B', '#60A5FA', '#F87171', '#A78BFA', '#FB923C',
+  '#8B5CF6', '#10B981', '#F59E0B', '#60A5FA', '#F43F5E', '#A78BFA', '#FB923C',
 ]
 
 function colorForEvent(id: string) {
