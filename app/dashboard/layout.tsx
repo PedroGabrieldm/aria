@@ -15,6 +15,12 @@ export default async function DashboardLayout({
 
   if (!user) redirect('/login')
 
+  // Garante que o perfil existe — cria automaticamente se não existir
+  // (pode acontecer quando o Supabase exige confirmação de email antes do insert)
+  await supabase
+    .from('profiles')
+    .upsert({ id: user.id }, { onConflict: 'id', ignoreDuplicates: true })
+
   const { data: profile } = await supabase
     .from('profiles')
     .select('full_name, plan')
