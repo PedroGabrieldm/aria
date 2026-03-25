@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(supabase --version)",
+      "Bash(psql --version)",
+      "Bash(npx supabase:*)",
+      "Bash(find /c/Users/Admin/Desktop/Repositórios/assistente-ia/node_modules/next/dist/docs -name *middleware*)",
+      "Bash(find /c/Users/Admin/Desktop/Repositórios/assistente-ia/node_modules/next/dist/docs -name *routing*)",
+      "Bash(npx tsc:*)",
+      "Bash(grep -E \"^export|interface Schema$Event |interface Schema$CalendarList\")",
+      "Bash(grep -A 20 \"interface Schema$Event \")",
+      "Bash(find /c/Users/Admin/Desktop/Repositórios/assistente-ia/node_modules/recharts/types -name *.d.ts)",
+      "Bash(npm run:*)",
+      "Bash(ls \"/c/Users/Admin/Desktop/Repositórios/assistente-ia/app/\\(dashboard\\)/\")",
+      "Bash(mkdir -p \"app/dashboard\")",
+      "Bash(cp \"app/\\(dashboard\\)/layout.tsx\" \"app/dashboard/layout.tsx\")",
+      "Bash(cp \"app/\\(dashboard\\)/page.tsx\" \"app/dashboard/page.tsx\")",
+      "Bash(cp \"app/\\(dashboard\\)/loading.tsx\" \"app/dashboard/loading.tsx\")",
+      "Bash(cp \"app/\\(dashboard\\)/error.tsx\" \"app/dashboard/error.tsx\")"
+    ]
+  }
+}
